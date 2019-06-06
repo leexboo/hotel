@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leexboo.hotel.mapper.OrderMapper">
+    <insert id="addOrder">
+        insert into order(user_id,room_id,start_time,end_time) values (#{userId},#{roomId},#{startTime},#{endTime})
+    </insert>
+    <delete id="deleteOrder">
+        delete from order where order_id=#{orderId}
+    </delete>
+</mapper>
